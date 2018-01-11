@@ -44,6 +44,8 @@ header.minimized h1 {display: none; font-size: 2em;}
 
 #work h2 {color: $defaultBlue;}
 #work img {max-width: $defaultMaxWidth;width: 100%;height: auto;display: block;}
+#work ::-moz-selection {color: $defaultWhite;background: $defaultBlue;}
+#work ::selection {color: $defaultWhite;background: $defaultBlue;}
 
 #featured h2 {color: $defaultGreen;}
 #featured ul li {width: 16%;margin: 0 2%;}
