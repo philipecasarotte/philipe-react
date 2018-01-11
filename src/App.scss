@@ -1,0 +1,85 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,900);
+
+$defaultBlack: #000;
+$defaultBlue: #0076FF;
+$defaultDarkGray: #8E8E93;
+$defaultGreen: #44DB5E;
+$defaultLightGray: #F0F0F0;
+$defaultPink: #FF2851;
+$defaultRed: #FF3824;
+$defaultYellow: #FFCD00;
+$defaultWhite: #FFF;
+
+$defaultPadding:2em 2em 2em 2em;
+$defaultTitleMargin:0 0 0 0;
+$defaultParagraphNoMargin:0 0 0 0;
+$defaultParagraphMargin:0 0 1.5em 0;
+$defaultMaxWidth: 1024px;
+
+::-moz-selection {color: $defaultBlack;background: $defaultPink;}
+::selection {color: $defaultBlack;background: $defaultPink;}
+* {margin: 0;padding: 0;box-sizing: border-box;-webkit-transition: all 1s ease-in-out;-moz-transition: all 0.5s ease-in-out;-o-transition: all 0.5s ease-in-out;transition: all 0.5s ease-in-out;}
+
+body {background-color: $defaultWhite;font-family: 'Roboto', sans-serif;font-weight: 300;font-size: 1.5em;}
+
+h1, h2, h3, h4, h5, h6 {margin: $defaultTitleMargin;font-weight: 500;}
+h1 {font-weight: 900;font-size: 4em;line-height: 0.9em;}
+h2 {font-weight: 900;font-size: 3em;}
+
+p {margin: $defaultParagraphNoMargin;line-height: 1.5em;max-width: 1024px;}
+strong, a {font-weight: 400;color: $defaultBlack;}
+li {float: left;width: 25%;display: inline;}
+
+header, section {padding: $defaultPadding;float: left;width: 100%;}
+//section.gray {background-color: $defaultLightGray;}
+
+header {background-color: $defaultWhite;border-bottom: 1px solid $defaultDarkGray;}
+header h1 {float: left;}
+header img {float: right;width: 12.5%;height: auto;}
+header.minimized {position: fixed;}
+header.minimized h1 {display: none; font-size: 2em;}
+
+#bio h2 {color: $defaultRed;}
+#bio p {margin-bottom: 0;}
+
+#work h2 {color: $defaultBlue;}
+#work img {max-width: $defaultMaxWidth;width: 100%;height: auto;display: block;}
+
+#featured h2 {color: $defaultGreen;}
+#featured ul li {width: 16%;margin: 0 2%;}
+#featured ul li img {width: 100%;height: auto;}
+#featured ul li.current {width: 20%;}
+
+#full-bio div {-webkit-column-count:2;-moz-column-count:2;column-count:2;max-width: $defaultMaxWidth;}
+#full-bio h2 {color: $defaultPink;}
+#full-bio p {margin: $defaultParagraphMargin;}
+
+#experience h2 {color: $defaultYellow;}
+#experience li.rails {background-color: $defaultRed;}
+#experience li.developer {background-color: $defaultBlue;}
+#experience li.product {background-color: $defaultGreen;}
+#experience li.project {background-color: $defaultPink;}
+
+#favorites h2 {color: $defaultDarkGray;}
+#favorites li {width: 20%;}
+
+footer {text-align: center;}
+footer a {display: block;color: black;}
+footer nav {font-size: 0.6em;}
+footer nav a {display: inline;text-decoration: none;}
+
+@media screen and (orientation:portrait){
+	$defaultPadding:1em 1em 1em 1em;
+	
+	body {font-size: 1.5em;overflow-x: hidden;}
+	
+	h1 {font-weight: 900;font-size: 3em;}
+	h2 {font-weight: 900;font-size: 2em;}
+	
+	li {width: 100%;}
+	
+	header, section {padding: $defaultPadding;}
+	
+	#full-bio div {-webkit-column-count:1;-moz-column-count:1;column-count:1;}
+	#favorites li {width: 50%;}
+}
