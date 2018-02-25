@@ -15,7 +15,7 @@ $defaultPadding:2em 2em 2em 2em;
 $defaultTitleMargin:0 0 0 0;
 $defaultParagraphNoMargin:0 0 0 0;
 $defaultParagraphMargin:0 0 1.5em 0;
-$defaultMaxWidth: 1024px;
+$defaultMaxWidth: 70%;
 
 ::-moz-selection {color: $defaultWhite;background: $defaultPink;}
 ::selection {color: $defaultWhite;background: $defaultPink;}
@@ -27,7 +27,7 @@ h1, h2, h3, h4, h5, h6 {margin: $defaultTitleMargin;font-weight: 500;font-family
 h1 {font-weight: 900;font-size: 4em;line-height: 0.9em;}
 h2 {font-weight: 900;font-size: 3em;}
 
-p {margin: $defaultParagraphNoMargin;line-height: 1.5em;max-width: 1024px;}
+p {margin: $defaultParagraphNoMargin;line-height: 1.5em;max-width: $defaultMaxWidth;}
 strong, a {font-weight: 400;color: $defaultBlack;}
 li {float: left;width: 25%;display: inline;}
 
@@ -36,7 +36,7 @@ header, section {padding: $defaultPadding;float: left;width: 100%;}
 
 header {background-color: $defaultBlack;color: $defaultWhite;border-bottom: 1px solid $defaultDarkGray;}
 header h1 {float: left;}
-header img {float: right;width: 12.5%;height: auto;}
+header img {float: right;width: 30%;height: auto;border-radius:50%;position:absolute;right:2em;}
 header.minimized {position: fixed;}
 header.minimized h1 {display: none; font-size: 2em;}
 
@@ -81,6 +81,7 @@ footer nav a {display: inline;text-decoration: none;}
 
 @media screen and (orientation:portrait){
 	$defaultPadding:1em 1em 1em 1em;
+	$defaultMaxWidth: 100%;
 	
 	body {font-size: 1.5em;overflow-x: hidden;}
 	
