@@ -1,4 +1,5 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,900);
+@import "https://fonts.googleapis.com/css?family=Roboto:300,400,500,900";
+@import "https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,600,600i,700,700i";
 
 $defaultBlack: #000;
 $defaultBlue: #0076FF;
@@ -16,13 +17,13 @@ $defaultParagraphNoMargin:0 0 0 0;
 $defaultParagraphMargin:0 0 1.5em 0;
 $defaultMaxWidth: 1024px;
 
-::-moz-selection {color: $defaultBlack;background: $defaultPink;}
-::selection {color: $defaultBlack;background: $defaultPink;}
-* {margin: 0;padding: 0;box-sizing: border-box;-webkit-transition: all 1s ease-in-out;-moz-transition: all 0.5s ease-in-out;-o-transition: all 0.5s ease-in-out;transition: all 0.5s ease-in-out;}
+::-moz-selection {color: $defaultWhite;background: $defaultPink;}
+::selection {color: $defaultWhite;background: $defaultPink;}
+* {margin: 0;padding: 0;box-sizing: border-box;} //-webkit-transition: all 1s ease-in-out;-moz-transition: all 0.5s ease-in-out;-o-transition: all 0.5s ease-in-out;transition: all 0.5s ease-in-out;
 
-body {background-color: $defaultWhite;font-family: 'Roboto', sans-serif;font-weight: 300;font-size: 1.5em;}
+body {background-color: $defaultWhite;font-family: 'Crimson Text', sans-serif;font-weight: 300;font-size: 1.5em;}
 
-h1, h2, h3, h4, h5, h6 {margin: $defaultTitleMargin;font-weight: 500;}
+h1, h2, h3, h4, h5, h6 {margin: $defaultTitleMargin;font-weight: 500;font-family: 'Roboto', sans-serif;}
 h1 {font-weight: 900;font-size: 4em;line-height: 0.9em;}
 h2 {font-weight: 900;font-size: 3em;}
 
@@ -33,37 +34,45 @@ li {float: left;width: 25%;display: inline;}
 header, section {padding: $defaultPadding;float: left;width: 100%;}
 //section.gray {background-color: $defaultLightGray;}
 
-header {background-color: $defaultWhite;border-bottom: 1px solid $defaultDarkGray;}
+header {background-color: $defaultBlack;color: $defaultWhite;border-bottom: 1px solid $defaultDarkGray;}
 header h1 {float: left;}
 header img {float: right;width: 12.5%;height: auto;}
 header.minimized {position: fixed;}
 header.minimized h1 {display: none; font-size: 2em;}
 
-#bio h2 {color: $defaultRed;}
+#bio h2 {color: $defaultBlack;}
 #bio p {margin-bottom: 0;}
 
-#work h2 {color: $defaultBlue;}
+#work h2 {color: $defaultBlack;}
 #work img {max-width: $defaultMaxWidth;width: 100%;height: auto;display: block;}
 #work ::-moz-selection {color: $defaultWhite;background: $defaultBlue;}
 #work ::selection {color: $defaultWhite;background: $defaultBlue;}
 
-#featured h2 {color: $defaultGreen;}
+#featured h2 {color: $defaultBlack;}
 #featured ul li {width: 16%;margin: 0 2%;}
 #featured ul li img {width: 100%;height: auto;}
 #featured ul li.current {width: 20%;}
+#featured ::-moz-selection {color: $defaultWhite;background: $defaultGreen;}
+#featured ::selection {color: $defaultWhite;background: $defaultGreen;}
 
 #full-bio div {-webkit-column-count:2;-moz-column-count:2;column-count:2;max-width: $defaultMaxWidth;}
-#full-bio h2 {color: $defaultPink;}
+#full-bio h2 {color: $defaultBlack;}
 #full-bio p {margin: $defaultParagraphMargin;}
+#full-bio ::-moz-selection {color: $defaultWhite;background: $defaultPink;}
+#full-bio ::selection {color: $defaultWhite;background: $defaultPink;}
 
-#experience h2 {color: $defaultYellow;}
+#experience h2 {color: $defaultBlack;}
 #experience li.rails {background-color: $defaultRed;}
 #experience li.developer {background-color: $defaultBlue;}
 #experience li.product {background-color: $defaultGreen;}
 #experience li.project {background-color: $defaultPink;}
+#experience ::-moz-selection {color: $defaultBlack;background: $defaultYellow;}
+#experience ::selection {color: $defaultBlack;background: $defaultYellow;}
 
-#favorites h2 {color: $defaultDarkGray;}
+#favorites h2 {color: $defaultBlack;}
 #favorites li {width: 20%;}
+#favorites ::-moz-selection {color: $defaultWhite;background: $defaultDarkGray;}
+#favorites ::selection {color: $defaultWhite;background: $defaultDarkGray;}
 
 footer {text-align: center;}
 footer a {display: block;color: black;}

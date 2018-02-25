@@ -8,7 +8,7 @@ class App extends Component {
 		)
 	}
 }
-//
+
 // class SimpleSlider extends Component {
 // 	render() {
 // 		var settings = {
