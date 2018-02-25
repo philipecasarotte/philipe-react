@@ -9,6 +9,12 @@ class App extends Component {
 	}
 }
 
+// $(window).load(function(){
+// 	$(".loader-canvas").animate({top: "-100%", opacity:0}, 500, function(){
+// 		$(".loader-canvas, .loader").remove();
+// 	});
+// });
+
 // class SimpleSlider extends Component {
 // 	render() {
 // 		var settings = {

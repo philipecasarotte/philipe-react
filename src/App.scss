@@ -17,9 +17,12 @@ $defaultParagraphNoMargin:0 0 0 0;
 $defaultParagraphMargin:0 0 1.5em 0;
 $defaultMaxWidth: 70%;
 
-::-moz-selection {color: $defaultWhite;background: $defaultPink;}
-::selection {color: $defaultWhite;background: $defaultPink;}
+::-moz-selection {color: $defaultWhite;background: $defaultYellow;}
+::selection {color: $defaultWhite;background: $defaultYellow;}
 * {margin: 0;padding: 0;box-sizing: border-box;} //-webkit-transition: all 1s ease-in-out;-moz-transition: all 0.5s ease-in-out;-o-transition: all 0.5s ease-in-out;transition: all 0.5s ease-in-out;
+
+.loader-canvas {-webkit-transition: none;-moz-transition: none;-o-transition: none;transition: none;background-color: $defaultWhite;width: 100%;height: 100%;position: absolute;top: 0;left: 0;z-index: 99999;}
+.loader {position: fixed;z-index: 100;left: 50%;top: 50%;margin-left: -20px;transition: all .5s;-webkit-animation: loaderSpin 2s infinite; /* Chrome, Safari, Opera */animation: loaderSpin 2s infinite;}
 
 body {background-color: $defaultWhite;font-family: 'Crimson Text', sans-serif;font-weight: 300;font-size: 1.5em;}
 
@@ -30,6 +33,7 @@ h2 {font-weight: 900;font-size: 3em;}
 p {margin: $defaultParagraphNoMargin;line-height: 1.5em;max-width: $defaultMaxWidth;}
 strong, a {font-weight: 400;color: $defaultBlack;}
 li {float: left;width: 25%;display: inline;}
+p a {background-color: $defaultYellow;}
 
 header, section {padding: $defaultPadding;float: left;width: 100%;}
 //section.gray {background-color: $defaultLightGray;}
@@ -45,36 +49,27 @@ header.minimized h1 {display: none; font-size: 2em;}
 
 #work h2 {color: $defaultBlack;}
 #work img {max-width: $defaultMaxWidth;width: 100%;height: auto;display: block;}
-#work ::-moz-selection {color: $defaultWhite;background: $defaultBlue;}
-#work ::selection {color: $defaultWhite;background: $defaultBlue;}
 
 #featured h2 {color: $defaultBlack;}
 #featured ul li {width: 16%;margin: 0 2%;}
 #featured ul li img {width: 100%;height: auto;}
 #featured ul li.current {width: 20%;}
-#featured ::-moz-selection {color: $defaultWhite;background: $defaultGreen;}
-#featured ::selection {color: $defaultWhite;background: $defaultGreen;}
 
 #full-bio div {-webkit-column-count:2;-moz-column-count:2;column-count:2;max-width: $defaultMaxWidth;}
 #full-bio h2 {color: $defaultBlack;}
-#full-bio p {margin: $defaultParagraphMargin;}
-#full-bio ::-moz-selection {color: $defaultWhite;background: $defaultPink;}
-#full-bio ::selection {color: $defaultWhite;background: $defaultPink;}
+#full-bio p {margin: $defaultParagraphMargin;max-width: 90%;}
 
 #experience h2 {color: $defaultBlack;}
-#experience li.rails {background-color: $defaultRed;}
-#experience li.developer {background-color: $defaultBlue;}
-#experience li.product {background-color: $defaultGreen;}
-#experience li.project {background-color: $defaultPink;}
-#experience ::-moz-selection {color: $defaultBlack;background: $defaultYellow;}
-#experience ::selection {color: $defaultBlack;background: $defaultYellow;}
+#experience li.rails {background-color: $defaultWhite;}
+#experience li.developer {background-color: $defaultWhite;}
+#experience li.product {background-color: $defaultWhite;}
+#experience li.project {background-color: $defaultWhite;}
 
 #favorites h2 {color: $defaultBlack;}
-#favorites li {width: 20%;}
-#favorites ::-moz-selection {color: $defaultWhite;background: $defaultDarkGray;}
-#favorites ::selection {color: $defaultWhite;background: $defaultDarkGray;}
+#favorites li {width: 20%; background-color: $defaultWhite;}
+#favorites li:nth-child(even) {background-color: $defaultBlack; color: $defaultWhite;}
 
-footer {text-align: center;}
+footer {text-align: center;margin-bottom:2em;}
 footer a {display: block;color: black;}
 footer nav {font-size: 0.6em;}
 footer nav a {display: inline;text-decoration: none;}
@@ -94,4 +89,32 @@ footer nav a {display: inline;text-decoration: none;}
 	
 	#full-bio div {-webkit-column-count:1;-moz-column-count:1;column-count:1;}
 	#favorites li {width: 50%;}
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes loaderSpin {
+    0%   {
+	   	-ms-transform: rotate(0deg); /* IE 9 */
+	    -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+	    transform: rotate(0deg);
+    }
+    100% {
+    		   	-ms-transform: rotate(360deg); /* IE 9 */
+	    -webkit-transform: rotate(360deg); /* Chrome, Safari, Opera */
+	    transform: rotate(360deg);
+	}
+}
+
+/* Standard syntax */
+@keyframes loaderSpin {
+    0%   {
+	   	-ms-transform: rotate(0deg); /* IE 9 */
+	    -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+	    transform: rotate(0deg);
+    }
+    100% {
+    	-ms-transform: rotate(360deg); /* IE 9 */
+	    -webkit-transform: rotate(360deg); /* Chrome, Safari, Opera */
+	    transform: rotate(360deg);
+	}
 }
